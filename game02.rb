@@ -10,7 +10,7 @@ input_value = gets
 
 # ねこるゲームの処理
 values = ['ネコ太郎','クマオ','ヌーピー']
-robo = rand(3)
+robo = rand(3) + 1
 
 # ねこる判定
 player = input_value.to_i
