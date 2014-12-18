@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 puts 'ねこるゲーム開始'
 sleep 1
 
@@ -6,7 +7,13 @@ puts '何を出しますか？'
 puts '1 ネコ太郎'
 puts '2 クマオ'
 puts '3 ヌーピー'
-input_value = gets
+print "> "
+begin
+  input_value = gets
+rescue Interrupt
+  puts "......逃げるんですね？"
+  exit
+end
 
 # ねこるゲームの処理
 values = ['ネコ太郎','クマオ','ヌーピー']
